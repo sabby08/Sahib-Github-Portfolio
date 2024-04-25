@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="eng">
+<meta charset="UTF-8">
+
+<head>
+    <title>Page 1</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script>
+        function submitForm() {
+            var hiddenFirstName = document.getElementsByName('hiddenFirstName')[0].value;
+            var hiddenLastName = document.getElementsByName('hiddenLastName')[0].value;
+            var message = "Hidden field values:\nFirst Name: " + hiddenFirstName + "\nLast Name: " + hiddenLastName;
+            alert(message);
+        }
+    </script>
+    <style>
+        input[type="button"] {
+            background-color: #e6e6e6;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="myForm">
+        <table>
+            <tr>
+                <td>First Name</td>
+                <td><input type="text" name="firstName" id="input1"></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input type="text" name="lastName" id="input2"></td>
+            </tr>
+        </table>
+        <input type="hidden" name="hiddenFirstName" value="Sahib Deep">
+        <input type="hidden" name="hiddenLastName" value="Singh">
+        <input type="button" value="Submit" onclick="submitForm()">
+        <input type="button" value="Help">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+baseline_train_acc,baseline_test_acc,tuned_train_acc,tuned_test_acc
+100.0,84.5,87.62,88.17
+85.25,84.17,85.25,84.33
+52.12,50.67,86.21,85.5
+84.83,84.5,85.62,85.5

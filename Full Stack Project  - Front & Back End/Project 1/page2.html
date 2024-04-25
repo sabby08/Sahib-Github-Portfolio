@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="eng">
+<meta charset="UTF-8" />
+
+<head>
+    <title>Page2</title>
+    <link rel="stylesheet" type="text/css" href="Page2.css" />
+</head>
+
+<body>
+    <script>
+        function showSelectedOption(select) {
+            var selectedOption = select.options[select.selectedIndex]
+            alert(
+                'Selected Option: ' +
+                selectedOption.value +
+                ' - ' +
+                selectedOption.text
+            )
+        }
+
+        function showChangedValue(event) {
+            alert('Changed Value: ' + event.target.value)
+        }
+
+        function simulateSubmitForm() {
+            var hiddenField = document.getElementById('hiddenField').value
+            alert('Hidden Field Value: ' + hiddenField)
+        }
+
+        function alerttextChanged() {
+            var inputTextValue = document.getElementById('input-text').value
+            alert('Input Text Value: ' + inputTextValue)
+        }
+    </script>
+
+    <br /><br /><br />
+    <form>
+        <table>
+            <tr>
+                <td colspan="2" class="invisible-cell" style="width:33.33%"><button>Button3</button></td>
+                <td colspan="2" class="invisible-cell" style="width:33.33%"><button>Button2</button></td>
+                <td colspan="2" class="invisible-cell" style="width:33.33%">
+                    <button onclick="simulateSubmitForm()">Button1</button>
+                    <input id="hiddenField" type="hidden" name="field_hidden" value="value_hidden" />
+                </td>
+            </tr>
+
+            <tr>
+                <td class="cell" colspan="2" style="width:33.33%">
+                    Course Information
+                    <ol>
+                        <li>itec3020_A@cognitechsystems.com</li>
+                        <li>Course Outline</li>
+                        <li>15%</li>
+                    </ol>
+                </td>
+                <td class="cell" colspan="2" style="width:33.33%">
+                    Favourite Weather<br /><br />
+                    <input onchange="showChangedValue(event)" type="radio" name="rb" />Summer
+                    <br />
+                    <input onchange="showChangedValue(event)" type="radio" name="rb" />Fall
+                    <br />
+                    <input onchange="showChangedValue(event)" type="radio" name="rb" />Winter
+                    <br />
+                    <input onchange="showChangedValue(event)" type="radio" name="rb" />Spring
+                </td>
+                </td>
+
+                <td class="cell" style="width:16.66%">
+                    <p>
+                        <em><i><b>"No Man Is An Island" by John Donne</b><br />
+                                No man is an island, Entire of itself, Every man is a piece of
+                                the continent, A part of the main. If a clod be washed away by
+                                the sea, Europe is the less. As well as if a promontory were.
+                                As well as if a manor of thy friend’s Or of thine own were:
+                                Any man’s death diminishes me, Because I am involved in
+                                mankind, And therefore never send to know for whom the bell
+                                tolls; It tolls for thee.
+                            </i></em>
+                    </p>
+                </td>
+                <td class="cell" style="width:16.66%">
+                    Which kind of books do you like? <br /><br />
+                    <input type="checkbox" />Science
+                    <br />
+                    <input type="checkbox" />Comics
+                    <br />
+                    <input type="checkbox" />Mystery
+                    <br />
+                    <input type="checkbox" />Other
+                    <br />
+                </td>
+            </tr>
+            <tr>
+                <td class="cell" rowspan="2" style="width:16.66%">
+                    <p style="font-size: 60%">
+                        Rich Dad Poor Dad is about Robert Kiyosaki and his two dads—his
+                        real father (poor dad) and the father of his best friend (rich
+                        dad)—and the ways in which both men shaped his thoughts about
+                        money and investing. You don’t need to earn a high income to be
+                        rich. Rich people make money work for them.
+                    </p>
+                </td>
+                <td class="cell" colspan="3" valign="top" style="width:33.33%">
+                    <img src="train.jpg" width="200" height="100" />
+                </td>
+                <td class="movie-title">
+                    Movie: Inception <br />
+                    Director: Christopher Nolan
+                </td>
+                <td class="cell" style="width:33.33%">
+                    <input id="input-text" onchange="alerttextChanged()" type="text" style="width: 80%;" />
+                </td>
+            </tr>
+            <tr>
+                <td class="cell" colspan="3" valign="bottom">
+                    <img src="stream.jpg" width="200" height="100" />
+                </td>
+                <td class="cell">
+                    York U id <br />
+                    <br />
+                    <select>
+                        <option>Two</option>
+                        <option>One</option>
+                        <option>Nine</option>
+                        <option>One</option>
+                    </select>
+                </td>
+                <td class="cell">
+                    Singh, Sahib Deep<br />
+                    2191 <b>
+                        <font color="#8B0000"> 7 </font>
+                    </b>0646
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

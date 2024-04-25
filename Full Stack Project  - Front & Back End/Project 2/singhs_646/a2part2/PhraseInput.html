@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>A2 Part 2: Phrase Input</title>
+    <link rel="stylesheet" type="text/css" href="Phrase.css">
+</head>
+<body>
+    <h1>Phrase Input</h1>
+    <p>Enter a phrase consisting of at least 3 words separated by space (' ').</p>
+    <p>The words will be parsed and matched with the following types:</p>
+    <ul>
+        <li>WT1 words: alphabetic only characters</li>
+        <li>WT2 words: float (real) numbers: digits with one dot</li>
+        <li>WT3 words: positive integer</li>
+        <li>WT4 words: undefined (are not of type WT1 - WT3 above)</li>
+    </ul>
+    <form action="PhraseParse.php" method="post" onsubmit="return validatePhrase()">
+        <label for="phrase">Enter your phrase:</label><br>
+        <input type="text" id="phrase" name="phrase" required><br>
+        <input type="submit" name="SubmitPhrase" value="SubmitPhrase">
+    </form>
+    <script>
+        function validatePhrase() {
+            var phraseInput = document.getElementById("phrase").value.trim();
+            var validCharactersRegex = /^[a-zA-Z0-9\s.-]+$/;
+
+            if (!validCharactersRegex.test(phraseInput)) {
+                alert("Invalid characters in the phrase. Only alphabetic, numeric, space, '-', and '.' characters are allowed.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>
+
