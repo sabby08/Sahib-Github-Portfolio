@@ -1,0 +1,9 @@
+Country,Capital,Languages,Area,Population,GDP,Gini
+Canada,Ottawa,"['English', 'French']",9984670,40769890,$2.472 trillion, 29.2
+China,Beijing,['Standard Chinese'],9596961,1409670000,$35.291 trillion, 37.1
+US,"Washington, D.C.",['English'],3796742,334914895,$28.781 trillion, 39.4
+Korea,Seoul,['Korean'],223172,7700000,N.A.,N.A.
+UK,London,"['Welsh', 'Ulster Scots', 'Scots', 'Scottish Gaelic', 'Cornish', 'Irish', 'British Sign Language', 'English']",244376,67596281,$4.029 trillion, 35.4
+France,Paris,['French'],643801,68373433,$3.988 trillion, 29.8
+Turkey,Ankara,['Turkish'],783562,85372377,$3.832 trillion, 41.9
+Italy,Rome,['Italian'],301340,58853482,$3.347 trillion, 32.5
